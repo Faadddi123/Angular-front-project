@@ -1,0 +1,38 @@
+<div>
+    <h2>Stagiaires</h2>
+    <input type="text" placeholder="Chercher un stagiaire">
+    <table>
+      <thead>
+        <tr>
+          <th>CIN</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Tel</th>
+          <th>Ecole</th>
+          <th>Année</th>
+          <th>Domaine</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let intern of interns">
+          <td>{{ intern.cin }}</td>
+          <td>{{ intern.nom }}</td>
+          <td>{{ intern.prenom }}</td>
+          <td>{{ intern.email }}</td>
+          <td>{{ intern.tel }}</td>
+          <td>{{ intern.ecole }}</td>
+          <td>{{ intern.annee }}</td>
+          <td>{{ intern.domaine }}</td>
+          <td>{{ intern.statut }}</td>
+          <td>
+            <button (click)="editIntern(intern)">Edit</button>
+            <button (click)="deleteIntern(intern)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
